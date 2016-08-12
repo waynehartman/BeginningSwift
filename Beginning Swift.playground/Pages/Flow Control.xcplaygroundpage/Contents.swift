@@ -48,23 +48,3 @@ import Foundation
 
 
 
-
-/*  Switch Value Binding  */
-
-
-
-
-
-/*  Switch 'where'  */
-
-
-
-
-
-/*  Compound Cases  */
-
-
-
-
-
-
