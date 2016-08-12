@@ -1,6 +1,7 @@
 import Foundation
 
-/*  Super useful reference for closure syntax:
+/*
+ *  Super useful reference for closure syntax:
  *  http://goshdarnclosuresyntax.com/
  */
 
