@@ -11,8 +11,14 @@ let add = {(left: Int, right: Int) -> Int in
     return left + right
 }
 
-add(5, 5)
+let subtract = {(left: Int, right: Int) -> Int in
+    return left - right
+}
 
+add(5, 5)
+add(6, 24)
+subtract(20, 89)
+subtract(10, 9)
 
 /*  Optional  */
 
@@ -31,15 +37,19 @@ typealias AliasedClosure = (String) -> (Void)
 
 /*  Function Argument  */
 
-func doSomething(_ closure: (String) -> (Void)) {
+func doHello(_ closure: (String) -> (Void)) {
     closure("Hello")
 }
 
 
 /*  Function Parameter  */
 
-doSomething({ (value: String) in
-    print("\(value), strange sir.")
+doHello({ (greeting: String) in
+    print("\(greeting), strange sir.")
+})
+
+doHello({ (greeting: String) in
+    print("\(greeting), World!")
 })
 
 
