@@ -6,10 +6,15 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		22DB2CBD1D5CCBC800268F52 /* Beginning Swift.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Beginning Swift.playground"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		22DB2CB61D5CCBA800268F52 = {
 			isa = PBXGroup;
 			children = (
+				22DB2CBD1D5CCBC800268F52 /* Beginning Swift.playground */,
 			);
 			sourceTree = "<group>";
 		};
