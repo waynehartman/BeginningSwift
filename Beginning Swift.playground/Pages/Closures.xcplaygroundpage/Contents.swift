@@ -7,11 +7,11 @@ import Foundation
 
 /*  Variable  */
 
-let variableClosure = {(left: Int, right: Int) -> Int in
+let add = {(left: Int, right: Int) -> Int in
     return left + right
 }
 
-variableClosure(5, 5)
+add(5, 5)
 
 
 /*  Optional  */
@@ -31,14 +31,14 @@ typealias AliasedClosure = (String) -> (Void)
 
 /*  Function Argument  */
 
-func doSomething(_ closure: AliasedClosure) {
-    closure("Hello!")
+func doSomething(_ closure: (String) -> (Void)) {
+    closure("Hello")
 }
 
 
 /*  Function Parameter  */
 
-doSomething({ (value: String) -> (Void) in
+doSomething({ (value: String) in
     print("\(value), strange sir.")
 })
 
