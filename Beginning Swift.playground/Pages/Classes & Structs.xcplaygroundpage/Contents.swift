@@ -24,16 +24,20 @@ struct Person {
     var lastName: String?
     
     func greet(person: Person) -> String {
-        return "Hello, \(person.firstName)."
+        return "Hello, \(person.firstName), my name is \(self.firstName)."
     }
 }
 
 /*  Initializers  */
 
 class Polygon {
-    let sides: Int
+    let sides: UInt
     
-    init(sides: Int) {
+    init?(sides: UInt) {
+        if (sides <= 0) {
+            return nil
+        }
+
         self.sides = sides
     }
 }
@@ -43,6 +47,8 @@ class Polygon {
 
 let car = Vehicle()
 let point = Point(x: 4, y: -9)
+print("(\(point.x), \(point.y))")
+
 let person = Person(firstName: "Wayne", lastName: "Hartman")
 let square = Polygon(sides: 4)
 
