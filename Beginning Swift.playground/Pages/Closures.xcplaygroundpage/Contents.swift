@@ -20,7 +20,7 @@ add(6, 24)
 subtract(20, 89)
 subtract(10, 9)
 
-var operations = [add, subtract]
+let operations = [add, subtract]
 
 for i in 0...75 {
     for operation in operations {

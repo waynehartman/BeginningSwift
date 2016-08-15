@@ -78,7 +78,7 @@ var j = -5
 
 repeat {
     print(j)
-    j = j + 1
+    j += 1
 } while j < 0
 
 
