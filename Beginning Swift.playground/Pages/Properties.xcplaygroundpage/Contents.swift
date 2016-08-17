@@ -77,15 +77,19 @@ class Polygon {
 let square = Polygon(sides:[4,4,4,4])
 print("perimeter:\(square.perimeter)")
 
+
+
+
+
 /*  Property Observers  */
 
 class Person {
     var name: String {
         willSet {
-            print("about to change name..")
+            print("about to change name...\(self.name)")
         }
         didSet {
-            print("changed name..")
+            print("changed name..\(self.name)")
         }
     }
     

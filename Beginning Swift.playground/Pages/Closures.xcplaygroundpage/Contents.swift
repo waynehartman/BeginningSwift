@@ -22,7 +22,7 @@ subtract(10, 9)
 
 let operations = [add, subtract]
 
-for i in 0...75 {
+for i in 0...100 {
     for operation in operations {
         operation(-i, i*i)
     }
@@ -47,18 +47,19 @@ typealias AliasedClosure = (String) -> (Void)
 
 /*  Function Argument  */
 
-func doHello(_ closure: (String) -> (Void)) {
+func doHello(closure: (String) -> ()) {
     closure("Hello")
 }
 
 
 /*  Function Parameter  */
 
-doHello({ (greeting: String) in
-    print("\(greeting), strange sir.")
+doHello(closure: { (greeting: String) in
+    let composedGreeting = "\(greeting), strange sir."
+    print(composedGreeting)
 })
 
-doHello({ (greeting: String) in
+doHello(closure: { (greeting: String) in
     print("\(greeting), World!")
 })
 
