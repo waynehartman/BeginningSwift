@@ -17,7 +17,7 @@ class ATMSession {
     let accountNumber: String
     let maxDeposit = 3000.0
     let maxWidthdrawl = 1000.0
-    var sessionIsActive = false
+    var sessionIsActive = true
 
     var balance: Double
 
@@ -27,8 +27,6 @@ class ATMSession {
     init(accountNumber: String, balance: Double) {
         self.accountNumber = accountNumber
         self.balance = balance
-        
-        sessionIsActive = true
     }
     
     func withdraw(amount: Double) throws -> (Double, Double) {
@@ -75,7 +73,7 @@ class ATMSession {
 
 let accountNumber = "34534533"
 
-var transaction = ATMSession(accountNumber: accountNumber, balance: 1000.0)
+var session = ATMSession(accountNumber: accountNumber, balance: 1000.0)
 //var transaction = ATMSession(accountNumber: accountNumber, balance: 2000.0)
 
 do {
@@ -83,13 +81,13 @@ do {
 //        transaction.endSession()
 //    }
 
-    let receipt1 = try transaction.withdraw(amount: 25.00)
+    let receipt1 = try session.withdraw(amount: 25.0)
     print(receipt1)
 
-    let receipt2 = try transaction.withdraw(amount: 900.0)
+    let receipt2 = try session.withdraw(amount: 900.0)
     print(receipt2)
 
-    let receipt3 = try transaction.withdraw(amount: 100.0)
+    let receipt3 = try session.withdraw(amount: 100.0)
     print(receipt3)
 
 } catch ATMError.insufficientFunds {
@@ -99,7 +97,7 @@ do {
 }
 
 do {
-    let receipt = try transaction.withdraw(amount: 3454)
+    let receipt = try session.withdraw(amount: 3454.0)
 } catch ATMError.sessionInactive {
     print("Session is inactive")
 }

@@ -5,20 +5,36 @@ import Foundation
 
 /*  Initializers  */
 
-
-
+class Animal {
+    var eyes: Int
+    
+    init(eyes: Int) {
+        self.eyes = eyes
+    }
+}
 
 
 /*  Subclass Initializers  */
 
+class Human : Animal {
+    var name: String
+    
+    init(eyes: Int, name: String) {
+        self.name = name
 
-
+        super.init(eyes: eyes)
+    }
+}
 
 
 /*  Struct Initializers  */
 
+struct Point {
+    var x: Int
+    var y: Int
+}
 
-
+let point = Point(x: 0, y: 0)
 
 
 /*  Convenience Initializers
@@ -28,6 +44,9 @@ import Foundation
     Rule 3: A convenience initializer must ultimately call a designated initializer.
  */
 
-
-
+extension Human {
+    convenience init(name: String) {
+        self.init(eyes:2, name: name)
+    }
+}
 
