@@ -42,21 +42,37 @@ let someObjects: [AnyObject] = [
 
 /*  Checking Type  */
 
+var songCount = 0
+var movieCount = 0
 
+for item in library {
+    if item is Movie {
+        movieCount += 1
+    } else if item is Song {
+        songCount += 1
+    }
+}
 
-
+print(songCount)
+print(movieCount)
 
 /*  Downcasting  */
 
-
-
-
+for item in library {
+    if let movie = item as? Movie {
+        print("movie: \(movie.name) director:\(movie.director)")
+    } else if let song = item as? Song {
+        print("song: \(song.name) artist:\(song.artist)")
+    }
+}
 
 /*  Forced Downcasting with `AnyObject`  */
 
+for item in someObjects {
+    let movie = item as! Movie
 
-
-
+    print("movie: \(movie.name) director:\(movie.director)")
+}
 
 /*  Downcasting with `Any`  */
 
@@ -75,9 +91,20 @@ things.append({ (name: String) -> String in "Hello, \(name)" })
 
 /* ---------------------------------------------------------------- */
 
-
-
-
-
-
+for thing in things {
+    switch thing {
+    case 0 as Int:
+        print("Zero!")
+    case let someInt as Int:
+        print("Some other integer: \(someInt)")
+    case let string as String:
+        print("A string: \(string)")
+    case let double as Double:
+        print("A double: \(double)")
+    case let movie as Movie:
+        print("movie: \(movie.name) director:\(movie.director)")
+    default:
+        print("Something else: \(thing)")
+    }
+}
 
