@@ -12,10 +12,10 @@
         <page name='Properties'/>
         <page name='Methods'/>
         <page name='Initialization'/>
+        <page name='Extensions'/>
         <page name='Protocols'/>
         <page name='Error Handling'/>
         <page name='Type Casting'/>
-        <page name='Extensions'/>
         <page name='Access Control'/>
     </pages>
 </playground>
