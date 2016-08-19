@@ -78,6 +78,13 @@ print("\(p3)")
 
 /*  Overriding */
 
+class Texan : Person {
+    override func greet() -> String {
+        return "Howdy!"
+    }
+}
 
+let texan = Texan(firstName: "Bob", lastName: "Smith")
+print(texan.greet())
 
 
