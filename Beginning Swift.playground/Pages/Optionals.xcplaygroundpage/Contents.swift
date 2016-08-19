@@ -12,8 +12,9 @@ greeting = "Hello"
 /*  Unwrapping  */
 
 var salutation: String? = nil
+var chars = salutation?.characters
 
-if salutation?.characters.count > 0 {
+if chars != nil {
     print(salutation)
 } else {
     print("Nothing to say")

@@ -117,10 +117,10 @@ func subtract(left: Int, right: Int) -> Int {
 }
 
 var arithmatic = add
-arithmatic(left:5, right:5)
+arithmatic(5, 5)
 
 arithmatic = subtract
-arithmatic(left:4, right: 2)
+arithmatic(4, 2)
 
 
 
