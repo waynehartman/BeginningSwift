@@ -74,7 +74,7 @@ class ATMSession {
 let accountNumber = "34534533"
 
 var session = ATMSession(accountNumber: accountNumber, balance: 1000.0)
-//var transaction = ATMSession(accountNumber: accountNumber, balance: 2000.0)
+//var session = ATMSession(accountNumber: accountNumber, balance: 2000.0)
 
 do {
 //    defer {

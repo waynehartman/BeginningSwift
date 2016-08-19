@@ -11,8 +11,8 @@ enum Position {
 }
 
 class Person {
-    var firstName: String
-    var lastName:String
+    let firstName: String
+    let lastName:String
     var position = Position.standing
 
     init(firstName: String, lastName: String) {
@@ -37,17 +37,17 @@ class Person {
  *  is that class methods can be overriden, static *cannot*.
  */
 class Polygon {
-    var sides: [Int]
+    let sides: [UInt]
 
-    init(sides: [Int]) {
+    init(sides: [UInt]) {
         self.sides = sides
     }
 
-    class func triangle(size: Int) -> Polygon {
+    class func triangle(size: UInt) -> Polygon {
         return Polygon(sides: [size, size, size])
     }
 
-    class func square(size: Int) -> Polygon {
+    class func square(size: UInt) -> Polygon {
         return Polygon(sides: [size, size, size, size])
     }
 }

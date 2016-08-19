@@ -4,7 +4,7 @@ import Foundation
 /*  Class Definition  */
 
 class Vehicle {
-    var numberOfWheels: Int?
+    var numberOfWheels: UInt?
     var color: String?
 }
 

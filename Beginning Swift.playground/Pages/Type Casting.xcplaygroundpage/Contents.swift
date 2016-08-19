@@ -4,14 +4,14 @@ import Foundation
 
 
 class MediaItem {
-    var name: String
+    let name: String
     init(name: String) {
         self.name = name
     }
 }
 
 class Movie: MediaItem {
-    var director: String
+    let director: String
     init(name: String, director: String) {
         self.director = director
         super.init(name: name)
@@ -19,7 +19,7 @@ class Movie: MediaItem {
 }
 
 class Song: MediaItem {
-    var artist: String
+    let artist: String
     init(name: String, artist: String) {
         self.artist = artist
         super.init(name: name)

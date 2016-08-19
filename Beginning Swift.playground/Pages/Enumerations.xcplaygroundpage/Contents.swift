@@ -91,9 +91,9 @@ print(phone.uppercased())
 /*  Associated Values  */
 
 enum PokemonFaction {
-    case valor(String, Int)
-    case mystic(String, Int)
-    case instinct(String, Int)
+    case valor(String, UInt)
+    case mystic(String, UInt)
+    case instinct(String, UInt)
 }
 
 let faction = PokemonFaction.valor("WayneHartman", 25)

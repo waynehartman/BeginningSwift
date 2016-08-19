@@ -11,7 +11,7 @@ func doMoreWork() -> String {
     return "did the needful"
 }
 
-func doMoreWork(job: String, time: Int) -> String {
+func doMoreWork(job: String, time: UInt) -> String {
     return "did \(job) for \(time) seconds"
 }
 

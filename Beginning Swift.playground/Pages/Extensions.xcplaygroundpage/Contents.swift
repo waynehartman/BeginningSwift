@@ -3,7 +3,7 @@ import Foundation
 import MapKit
 
 class Place : NSObject {
-    var name: String
+    let name: String
     var latitude = 0.0
     var longitude = 0.0
     

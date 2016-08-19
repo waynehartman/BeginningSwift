@@ -6,9 +6,9 @@ import Foundation
 /*  Initializers  */
 
 class Animal {
-    var eyes: Int
+    let eyes: UInt
     
-    init(eyes: Int) {
+    init(eyes: UInt) {
         self.eyes = eyes
     }
 }
@@ -17,9 +17,9 @@ class Animal {
 /*  Subclass Initializers  */
 
 class Human : Animal {
-    var name: String
+    let name: String
     
-    init(eyes: Int, name: String) {
+    init(eyes: UInt, name: String) {
         self.name = name
 
         super.init(eyes: eyes)
