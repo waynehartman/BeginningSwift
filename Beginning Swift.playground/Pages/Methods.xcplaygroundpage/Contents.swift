@@ -88,3 +88,14 @@ let texan = Texan(firstName: "Bob", lastName: "Smith")
 print(texan.greet())
 
 
+/*  Overloading */
+
+class Arithmatic {
+    func add(left: Int, right: Int) -> Int {
+        return left + right
+    }
+    
+    func add(left:Double, right: Double) -> Double {
+        return left + right
+    }
+}
