@@ -15,6 +15,15 @@ func doMoreWork(job: String, time: UInt) -> String {
     return "did \(job) for \(time) seconds"
 }
 
+/*  guard */
+
+func process(value: Int) {
+    guard value > 5 else {
+        return
+    }
+
+    print(value)
+}
 
 /*  Calling Functions  */
 

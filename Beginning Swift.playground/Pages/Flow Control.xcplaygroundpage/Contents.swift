@@ -55,7 +55,15 @@ for (fruit, count) in inventory {
     print("\(fruit): \(count)")
 }
 
+/*  Guard  */
 
+for (fruit, count) in inventory {
+    guard count > 50 else {
+        continue
+    }
+
+    print("well stocked: \(fruit) (\(count))")
+}
 
 
 /*  while  */
