@@ -65,14 +65,6 @@ for (fruit, count) in inventory {
     print("well stocked: \(fruit) (\(count))")
 }
 
-
-
-/*  Guard  */
-
-
-
-
-
 /*  while  */
 
 var i = 5
