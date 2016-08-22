@@ -25,6 +25,12 @@ func process(value: Int) {
     print(value)
 }
 
+/*  Guard  */
+
+
+
+
+
 /*  Calling Functions  */
 
 doWork()
