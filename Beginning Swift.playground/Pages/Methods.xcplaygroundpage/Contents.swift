@@ -33,8 +33,8 @@ class Person {
 
 /* Class Methods vs. Type Methods */
 
-/* The difference between static and class methods with classes, 
- *  is that class methods can be overriden, static *cannot*.
+/* The difference between static and class methods: With classes,
+ *  class methods can be overriden, static methods *cannot*.
  */
 class Polygon {
     let sides: [UInt]
@@ -47,7 +47,7 @@ class Polygon {
         return Polygon(sides: [size, size, size])
     }
 
-    class func square(size: UInt) -> Polygon {
+    static func square(size: UInt) -> Polygon {
         return Polygon(sides: [size, size, size, size])
     }
 }
