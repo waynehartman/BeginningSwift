@@ -90,12 +90,14 @@ print(texan.greet())
 
 /*  Overloading */
 
+// Uniqueness of method names includes the function name + parameter names + parameter types + return type
+
 class Arithmatic {
     func add(left: Int, right: Int) -> Int {
         return left + right
     }
-    
-    func add(left:Double, right: Double) -> Double {
+
+    func add(left: Double, right: Double) -> Double {
         return left + right
     }
 }
