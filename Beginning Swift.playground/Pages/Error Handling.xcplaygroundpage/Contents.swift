@@ -30,15 +30,16 @@ class ATMSession {
     }
     
     func withdraw(amount: Double) throws -> (Double, Double) {
-        if sessionIsActive == false {
+        guard self.sessionIsActive == true else {
             throw ATMError.sessionInactive
         }
 
-        if amount > self.balance {
+        guard amount <= self.balance else {
             throw ATMError.insufficientFunds
         }
-        
-        if (amount + self.dailyWithdrawl) > self.maxWidthdrawl {
+
+        let isUnderMaxDailyWithdrawl = (amount + self.dailyWithdrawl) <= self.maxWidthdrawl
+        guard isUnderMaxDailyWithdrawl else {
             throw ATMError.maxDailyWithdrawl(maxAmount: self.maxWidthdrawl, remainingAmount: self.maxWidthdrawl - self.dailyWithdrawl)
         }
         
@@ -49,11 +50,11 @@ class ATMSession {
     }
     
     func deposit(amount: Double) throws -> Double {
-        if sessionIsActive == false {
+        guard sessionIsActive == true else {
             throw ATMError.sessionInactive
         }
 
-        if (amount + self.dailyDeposit) > self.maxDeposit {
+        guard (amount + self.dailyDeposit) <= self.maxDeposit else {
             throw ATMError.maxDailyDeposit
         }
 
@@ -78,7 +79,7 @@ var session = ATMSession(accountNumber: accountNumber, balance: 1000.0)
 
 do {
 //    defer {
-//        transaction.endSession()
+//        session.endSession()
 //    }
 
     let receipt1 = try session.withdraw(amount: 25.0)
