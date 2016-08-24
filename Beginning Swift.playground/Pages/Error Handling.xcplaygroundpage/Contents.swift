@@ -21,8 +21,8 @@ class ATMSession {
 
     var balance: Double
 
-    var dailyDeposit: Double = 0.0
-    var dailyWithdrawl: Double = 0.0
+    var dailyDeposit = 0.0
+    var dailyWithdrawl = 0.0
     
     init(accountNumber: String, balance: Double) {
         self.accountNumber = accountNumber
@@ -50,7 +50,7 @@ class ATMSession {
     }
     
     func deposit(amount: Double) throws -> Double {
-        guard sessionIsActive == true else {
+        guard sessionIsActive else {
             throw ATMError.sessionInactive
         }
 
