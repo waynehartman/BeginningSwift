@@ -54,7 +54,8 @@ class ATMSession {
             throw ATMError.sessionInactive
         }
 
-        guard (amount + self.dailyDeposit) <= self.maxDeposit else {
+        let isUnderMaxDailyDeposit = (amount + self.dailyDeposit) <= self.maxDeposit
+        guard isUnderMaxDailyDeposit else {
             throw ATMError.maxDailyDeposit
         }
 
