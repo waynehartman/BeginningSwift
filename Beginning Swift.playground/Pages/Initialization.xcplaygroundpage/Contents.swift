@@ -50,3 +50,31 @@ extension Human {
     }
 }
 
+
+
+
+
+/*
+ *  EXERCISE:
+ *  1) Create a series of classes that model different kinds of accounts
+ *  2) Include properties such as a nickname, account number, balance, etc.
+ */
+
+class Account {
+    let accountNumber: String
+    let name: String
+    
+    init(accountNumber: String, name: String) {
+        self.accountNumber = accountNumber
+        self.name = name
+    }
+}
+
+class BankAccount : Account {
+    var balance: Double
+    
+    init(accountNumber: String, name: String, balance: Double) {
+        self.balance = balance
+        super.init(accountNumber: accountNumber, name: name)
+    }
+}
