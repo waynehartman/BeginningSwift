@@ -157,3 +157,22 @@ let theNeedful = doTheNeedful()
 theNeedful(4, 5)
 
 
+
+
+
+/*
+ *  EXERCISE:
+ *  1) Create a function that will divide two Double values and return the answer.
+ *  2) If the divisor is 0, it should return nil
+ */
+
+func divide(left: Double, right:Double) -> Double? {
+    guard right != 0 else {
+        return nil
+    }
+
+    return left / right
+}
+
+let division = divide(left: 240, right: -89)
+print(division)
