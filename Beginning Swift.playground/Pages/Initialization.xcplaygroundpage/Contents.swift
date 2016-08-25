@@ -31,3 +31,14 @@ import Foundation
 
 
 
+
+/*
+ *  EXERCISE:
+ *  1) Create a series of classes that model different kinds of accounts
+ *  2) Include properties such as a nickname, account number, balance, etc.
+ */
+
+
+
+
+
