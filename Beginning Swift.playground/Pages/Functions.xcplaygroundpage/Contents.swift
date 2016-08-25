@@ -60,3 +60,13 @@ import Foundation
 
 
 
+
+/*
+ *  EXERCISE:
+ *  1) Create a function that will divide two Double values and return the answer.
+ *  2) If the divisor is 0, it should return nil
+ */
+
+
+
+
