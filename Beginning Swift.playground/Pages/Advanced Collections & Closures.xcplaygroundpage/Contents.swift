@@ -30,7 +30,7 @@ let people = [Person(firstName: "Pedro", lastName: "Manning", age: 35),
               Person(firstName: "Philip", lastName: "Ford", age: 65),
               Person(firstName: "Lawrence", lastName: "Arnold", age: 11),
               Person(firstName: "Ebony", lastName: "Rhodes", age: 30),
-              Person(firstName: "Sandra", lastName: "Quinn", age: 31)]
+              Person(firstName: "Sandra", lastName: "Manning", age: 33)]
 
 /*  Map  */
 
