@@ -57,7 +57,14 @@ print(sorted)
 
 /*
  *  EXERCISE:
- *  Create a list of people to only include people with *odd* ages between 17-35, sort them by last name, first name.
+ *  Create a report to only include people with *odd* ages between 17-35, sort them by last name, first name.
+ *  Then combine them into a single string that prints each person on a separate line, showing last name, first name, age
+ *
+ *  For example:
+ *
+ *  Manning, Sandra, 35
+ *  Mason, Johnnie, 19
+ *  Turner, Angelo, 17
  */
 
 let filteredSorted = people.filter {
@@ -67,7 +74,7 @@ let filteredSorted = people.filter {
     default:
         return false
     }
-    }.sorted { $0.lastName == $1.lastName ? $0.firstName < $1.firstName : $0.lastName < $1.lastName }
+    }.sorted { $0.lastName == $1.lastName ? $0.firstName < $1.firstName : $0.lastName < $1.lastName }.reduce("\n\nReport:\n\n", { $0 + "\($1.lastName), \($1.firstName), \($1.age)\n" })
 
-print(filteredSorted.map({ "\($0.lastName), \($0.firstName), \($0.age);" }))
+print(filteredSorted)
 

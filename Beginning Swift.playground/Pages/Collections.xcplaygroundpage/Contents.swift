@@ -14,7 +14,7 @@ salutations.removeLast()
 
 print(salutations)
 
-var emptyArray = Array<String>()
+var emptyArray = [String]()
 
 /*  Dictionaries  */
 
@@ -26,6 +26,9 @@ print(dict)
 
 var mutableDict = [ "Erin" : 4]
 mutableDict["Seth"] = 16
+
+let score = mutableDict["Erin"]
+print(score)
 
 var emptyDict = [String : Int]()
 

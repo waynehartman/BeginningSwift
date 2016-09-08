@@ -17,5 +17,6 @@
         <page name='Error Handling'/>
         <page name='Type Casting'/>
         <page name='Access Control'/>
+        <page name='Advanced Collections &amp; Closures'/>
     </pages>
 </playground>
