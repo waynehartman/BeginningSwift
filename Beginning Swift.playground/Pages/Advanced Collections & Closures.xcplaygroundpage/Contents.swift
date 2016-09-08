@@ -30,40 +30,44 @@ let people = [Person(firstName: "Pedro", lastName: "Manning", age: 35),
               Person(firstName: "Philip", lastName: "Ford", age: 65),
               Person(firstName: "Lawrence", lastName: "Arnold", age: 11),
               Person(firstName: "Ebony", lastName: "Rhodes", age: 30),
-              Person(firstName: "Sandra", lastName: "Quinn", age: 31)]
+              Person(firstName: "Sandra", lastName: "Manning", age: 33)]
 
 /*  Map  */
 
-
-
+let allAges = people.map({ $0.age })
+print(allAges)
 
 
 /*  Filter  */
 
-
-
+let filteredPeople = people.filter({$0.age >= 18})
+print(filteredPeople)
 
 
 /*  Reduce  */
 
-
-
-
+let combinedAges = people.reduce(0, {$0 + $1.age})
+print(combinedAges / people.count)
 
 /*  Sorting  */
 
+let sorted = people.sorted(by: { $0.age < $1.age })
 
+print(sorted)
 
-
-
-
-
-/*  EXERCISE:
+/*
+ *  EXERCISE:
  *  Create a list of people to only include people with *odd* ages between 17-35, sort them by last name, first name.
- *
  */
 
+let filteredSorted = people.filter {
+    switch $0.age {
+    case 17...35:
+        return $0.age % 2 != 0
+    default:
+        return false
+    }
+    }.sorted { $0.lastName == $1.lastName ? $0.firstName < $1.firstName : $0.lastName < $1.lastName }
 
-
-
+print(filteredSorted.map({ "\($0.lastName), \($0.firstName), \($0.age);" }))
 
