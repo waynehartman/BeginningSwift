@@ -174,5 +174,8 @@ func divide(left: Double, right:Double) -> Double? {
     return left / right
 }
 
-let division = divide(left: 240, right: -89)
-print(division)
+if let division = divide(left: 240, right: -89) {
+    print(division)
+} else {
+    print("Undefined")
+}

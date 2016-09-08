@@ -75,7 +75,7 @@ class ATMSession {
 
 let accountNumber = "34534533"
 
-var session = ATMSession(accountNumber: accountNumber, balance: 1000.0)
+var session = ATMSession(accountNumber: accountNumber, balance: 1100.0)
 //var session = ATMSession(accountNumber: accountNumber, balance: 2000.0)
 
 do {

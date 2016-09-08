@@ -31,6 +31,10 @@ for i in 0..<fruits.count {
     print(fruits[i])
 }
 
+for (index, fruit) in fruits.enumerated() {
+    print("index: \(index), fruit: \(fruit)")
+}
+
 
 
 /*  for-in array  */
