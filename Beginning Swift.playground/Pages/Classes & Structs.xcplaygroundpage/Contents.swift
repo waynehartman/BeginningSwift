@@ -13,12 +13,6 @@ import Foundation
 
 
 
-/*  Stored Properties  */
-
-
-
-
-
 /*  Methods  */
 
 
