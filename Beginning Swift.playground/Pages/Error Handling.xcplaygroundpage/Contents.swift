@@ -100,6 +100,7 @@ do {
 
 do {
     let receipt = try session.withdraw(amount: 3454.0)
+    print(receipt)
 } catch ATMError.sessionInactive {
     print("Session is inactive")
 }

@@ -24,7 +24,7 @@ struct Person {
     var lastName: String?
     
     func greet(person: Person) -> String {
-        return "Hello, \(person.firstName), my name is \(self.firstName)."
+        return "Hello, \(String(describing:person.firstName)), my name is \(String(describing:self.firstName))."
     }
 }
 

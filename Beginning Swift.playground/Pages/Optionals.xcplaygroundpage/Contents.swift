@@ -4,7 +4,7 @@ import Foundation
 
 var greeting: String? = nil
 
-print(greeting)
+print(String(describing:greeting))
 
 greeting = "Hello"
 
@@ -15,7 +15,7 @@ var salutation: String? = nil
 let chars = salutation?.characters
 
 if chars != nil {
-    print(salutation)
+    print(String(describing: salutation))
 } else {
     print("Nothing to say")
 }
@@ -27,7 +27,7 @@ if chars != nil {
 var name: String? = "Wayne"
 
 if name!.characters.count > 0 {
-    print("My name is \(name)")
+    print("My name is \(String(describing:name))")
 }
 
 

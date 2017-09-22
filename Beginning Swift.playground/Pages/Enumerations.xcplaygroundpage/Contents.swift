@@ -114,7 +114,7 @@ enum PrimaryColor: Int {
 }
 
 let color = PrimaryColor(rawValue: 2)
-print(color)
+print(String(describing:color))
 
 let badColor = PrimaryColor(rawValue: 10)
-print(badColor)
+print(String(describing:badColor))

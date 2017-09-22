@@ -28,7 +28,7 @@ var mutableDict = [ "Erin" : 4]
 mutableDict["Seth"] = 16
 
 let score = mutableDict["Erin"]
-print(score)
+print(String(describing:score))
 
 var emptyDict = [String : Int]()
 

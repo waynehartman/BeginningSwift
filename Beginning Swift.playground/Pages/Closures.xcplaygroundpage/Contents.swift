@@ -32,7 +32,7 @@ for i in 0...100 {
 
 /*  Optional  */
 
-var optionalClosure: ((Void) -> (Void))? = nil
+var optionalClosure: (() -> (Void))? = nil
 
 if let unwrappedClosure = optionalClosure {
     unwrappedClosure()
